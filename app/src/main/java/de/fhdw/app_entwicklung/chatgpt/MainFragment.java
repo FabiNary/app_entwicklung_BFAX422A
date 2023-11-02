@@ -11,6 +11,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import java.util.Locale;
 
@@ -30,7 +31,10 @@ public class MainFragment extends Fragment {
                 getTextView().append(query);
 
                 MainActivity.backgroundExecutorService.execute(() -> {
-                    ChatGpt chatGpt = new ChatGpt("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");
+                    String apiKey = PreferenceManager
+                            .getDefaultSharedPreferences(getContext())
+                            .getString("api_key", "");
+                    ChatGpt chatGpt = new ChatGpt(apiKey);
                     String answer = chatGpt.getChatCompletion(query);
 
                     getTextView().append(CHAT_SEPARATOR);

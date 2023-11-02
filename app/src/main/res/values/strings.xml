@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ChatGpt</string>
     <string name="ask">Ask</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_settings">ChatGPT Settings</string>
     <string name="pref_chat_gpt_name">ChatGPT</string>
 
 
@@ -10,11 +10,4 @@
 
     <!-- Messages Preferences -->
     <string name="signature_title">API Key</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
